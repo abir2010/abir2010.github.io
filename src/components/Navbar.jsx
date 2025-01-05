@@ -1,9 +1,11 @@
 import { FiAlignCenter } from "react-icons/fi";
+import { useDarkMode } from "../contexts/DarkModeContext";
 import DarkMode from "./DarkMode";
 import MobileNavbar from "./MobileNavbar";
 
-export default function Navbar({ textColor, isOpen, setIsOpen }) {
-  let colorClass = textColor === "whitish" ? "white" : "black";
+export default function Navbar({ isOpen, setIsOpen }) {
+  const { isDarkMode } = useDarkMode();
+  const textColor = isDarkMode ? "text-white" : "text-black";
 
   return (
     <div>
@@ -11,7 +13,7 @@ export default function Navbar({ textColor, isOpen, setIsOpen }) {
         <div>
           <a
             href="/"
-            className={`text-2xl font-bold cursor-pointer text-${colorClass}`}
+            className={`text-2xl font-bold cursor-pointer ${textColor}`}
           >
             {"<"} M_K_Abir {"/>"}
           </a>
@@ -21,7 +23,7 @@ export default function Navbar({ textColor, isOpen, setIsOpen }) {
             <li>
               <a
                 href="#"
-                className={`text-${colorClass} transition font-bold text-lg hover:text-cyan-600`}
+                className={`${textColor} transition font-bold text-lg hover:text-cyan-600`}
               >
                 <span className="flex justify-end text-xs text-gray-400">
                   01
@@ -32,7 +34,7 @@ export default function Navbar({ textColor, isOpen, setIsOpen }) {
             <li>
               <a
                 href="#"
-                className={`text-${colorClass} transition font-bold text-lg hover:text-cyan-600`}
+                className={`${textColor} transition font-bold text-lg hover:text-cyan-600`}
               >
                 <span className="flex justify-end text-xs text-gray-400">
                   02
@@ -43,7 +45,7 @@ export default function Navbar({ textColor, isOpen, setIsOpen }) {
             <li>
               <a
                 href="#"
-                className={`text-${colorClass} transition font-bold text-lg hover:text-cyan-600`}
+                className={`${textColor} transition font-bold text-lg hover:text-cyan-600`}
               >
                 <span className="flex justify-end text-xs text-gray-400">
                   03
@@ -54,7 +56,7 @@ export default function Navbar({ textColor, isOpen, setIsOpen }) {
             <li>
               <a
                 href="#"
-                className={`text-${colorClass} transition font-bold text-lg hover:text-cyan-600`}
+                className={`${textColor} transition font-bold text-lg hover:text-cyan-600`}
               >
                 <span className="flex justify-end text-xs text-gray-400">
                   04
@@ -65,7 +67,7 @@ export default function Navbar({ textColor, isOpen, setIsOpen }) {
             <li>
               <a
                 href="#"
-                className={`text-${colorClass} transition font-bold text-lg hover:text-cyan-600`}
+                className={`${textColor} transition font-bold text-lg hover:text-cyan-600`}
               >
                 <span className="flex justify-end text-xs text-gray-400">
                   05
@@ -81,7 +83,7 @@ export default function Navbar({ textColor, isOpen, setIsOpen }) {
           <MobileNavbar setIsOpen={setIsOpen} isOpen={isOpen} />
         ) : (
           <button onClick={() => setIsOpen(true)} className={`block md:hidden`}>
-            <FiAlignCenter className={`text-3xl text-${colorClass}`} />
+            <FiAlignCenter className={`text-3xl ${textColor}`} />
           </button>
         )}
       </nav>

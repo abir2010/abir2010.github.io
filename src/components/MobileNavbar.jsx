@@ -5,7 +5,7 @@ export default function MobileNavbar({ setIsOpen }) {
       onClick={() => setIsOpen(false)}
     >
       <div
-        className="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800 dark:bg-primary dark:text-white 
+        className="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800 dark:bg-black dark:text-white 
           fixed left-0 top-0 w-64 h-full transform transition-transform duration-1000 ease-in-out"
         style={{ transform: `translateX(0)` }} // Translate 0 when open
         onClick={(e) => e.stopPropagation()} // Prevent click from closing on inner content

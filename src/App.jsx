@@ -4,7 +4,7 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="w-full h-screen bg-whitish dark:bg-primary ">
+    <div className="w-full h-screen bg-white dark:bg-black ">
       <Header />
       <Cursor />
     </div>

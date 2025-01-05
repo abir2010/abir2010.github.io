@@ -15,8 +15,8 @@ export default function Header() {
           style={{ backgroundImage: "url('/cover-dark.png')", height: "100%" }}
         >
           {/* nav */}
-          <Navbar textColor="whitish" isOpen={isOpen} setIsOpen={setIsOpen} />
-          <Banner textColor="whitish" />
+          <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+          <Banner />
         </div>
       ) : (
         <div
@@ -24,8 +24,8 @@ export default function Header() {
           style={{ backgroundImage: "url('/cover-light.png')", height: "100%" }}
         >
           {/* nav */}
-          <Navbar textColor="primary" isOpen={isOpen} setIsOpen={setIsOpen} />
-          <Banner textColor="primary" />
+          <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+          <Banner />
         </div>
       )}
     </>
