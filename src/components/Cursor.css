@@ -1,0 +1,22 @@
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  background-color: rgb(0, 122, 122);
+}
+
+.cursor-outline {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgb(53, 124, 124);
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;   
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
