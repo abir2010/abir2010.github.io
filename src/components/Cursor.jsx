@@ -38,11 +38,11 @@ export default function Cursor() {
 
   return (
     <>
-      <div ref={cursorDotRef} data-cursor-dot className="cursor-dot"></div>
+      <div ref={cursorDotRef} data-cursor-dot className="cursor-dot z-30"></div>
       <div
         ref={cursorOutlineRef}
         data-cursor-outline
-        className="cursor-outline"
+        className="cursor-outline z-30"
       ></div>
     </>
   );

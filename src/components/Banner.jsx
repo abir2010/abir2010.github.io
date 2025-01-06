@@ -22,6 +22,28 @@ export default function Banner() {
         Previously worked at{" "}
       </p>
       <Carousel />
+      {/* <div className="w-full flex justify-center items-center">
+        <img src={scrollDown} alt="" />
+      </div> */}
+      <div className="flex justify-center items-center">
+        <div className="animate-bounce">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="48"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 4v16m0 0l-4-4m4 4l4-4"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
   );
 }

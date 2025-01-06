@@ -6,10 +6,15 @@ import MobileNavbar from "./MobileNavbar";
 export default function Navbar({ isOpen, setIsOpen }) {
   const { isDarkMode } = useDarkMode();
   const textColor = isDarkMode ? "text-white" : "text-black";
+  const bgColor = isDarkMode
+    ? "bg-gray-800 bg-opacity-50"
+    : "bg-white bg-opacity-70";
 
   return (
     <div>
-      <nav className="flex justify-between items-center fixed w-full z-10 bg-transparent px-10 py-6">
+      <nav
+        className={`flex justify-between items-center fixed w-full z-20 px-10 py-4 backdrop-blur-lg ${bgColor}`}
+      >
         <div>
           <a
             href="/"
