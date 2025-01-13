@@ -13,7 +13,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
   return (
     <div>
       <nav
-        className={`flex justify-between items-center fixed w-full z-20 px-10 py-4 backdrop-blur-lg ${bgColor}`}
+        className={`flex justify-between items-center fixed w-full z-10 px-10 py-4 backdrop-blur-lg ${bgColor}`}
       >
         <div>
           <a

@@ -29,8 +29,8 @@ export default function Expertise() {
                   </svg>
                 </div>
                 <div className="text-xl">
-                  <span className="text-3xl relative z-10">Software</span>
-                  <div className="w-full bg-pink-400 h-2.5 relative bottom-3"></div>
+                  <span className="text-3xl relative">Software</span>
+                  <div className="w-full bg-pink-400 h-2.5 relative"></div>
                   Development
                 </div>
               </h2>
@@ -73,8 +73,8 @@ export default function Expertise() {
                   </svg>
                 </div>
                 <div className="text-xl">
-                  <span className="text-3xl relative z-10">Frontend Dev</span>
-                  <div className="w-full bg-blue-500 h-2.5 relative bottom-3"></div>
+                  <span className="text-3xl relative">Frontend Dev</span>
+                  <div className="w-full bg-blue-500 h-2.5 relative"></div>
                   React, Next JS
                 </div>
               </h2>
@@ -146,8 +146,8 @@ export default function Expertise() {
                   </svg>
                 </div>
                 <div className="text-xl">
-                  <span className="text-3xl relative z-10">Full Stack Dev</span>
-                  <div className="w-full bg-cyan-400 h-2.5 relative bottom-3"></div>
+                  <span className="text-3xl relative">Full Stack Dev</span>
+                  <div className="w-full bg-cyan-400 h-2.5 relative"></div>
                   React, Node JS
                 </div>
               </h2>

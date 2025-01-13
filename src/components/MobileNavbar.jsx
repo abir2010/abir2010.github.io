@@ -1,18 +1,30 @@
+import { ImCross } from "react-icons/im";
+import { useDarkMode } from "../contexts/DarkModeContext";
+
 export default function MobileNavbar({ setIsOpen }) {
+  const { isDarkMode } = useDarkMode();
+  const bgColor = isDarkMode ? "black" : "white";
+
   return (
     <div
-      className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-20 transition-opacity duration-1000 ease-in-out"
+      className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 transition-opacity duration-1000 ease-in-out"
       onClick={() => setIsOpen(false)}
     >
       <div
         className="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800 dark:bg-black dark:text-white 
           fixed left-0 top-0 w-64 h-full transform transition-transform duration-1000 ease-in-out"
-        style={{ transform: `translateX(0)` }} // Translate 0 when open
-        onClick={(e) => e.stopPropagation()} // Prevent click from closing on inner content
+        style={{ transform: `translateX(0)` }}
+        onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-center h-14 border-b">
+        <div className="flex items-center justify-between h-14 border-b px-4">
           <div className="font-bold text-xl">
             {"<"} M_K_Abir {"/>"}
+          </div>
+          <div
+            onClick={() => setIsOpen(false)}
+            className={`cursor-pointer relative left-20 p-4 mt-2 bg-${bgColor}`}
+          >
+            <ImCross color={`${isDarkMode ? "white" : "black"}`} />
           </div>
         </div>
         <div className="overflow-y-auto overflow-x-hidden flex flex-grow justify-center items-center">
@@ -50,12 +62,6 @@ export default function MobileNavbar({ setIsOpen }) {
             )}
           </ul>
         </div>
-        <button
-          onClick={() => setIsOpen(false)}
-          className="cursor-pointer w-full flex justify-center items-center mb-8 font-bold text-lg text-gray-600 hover:text-gray-800 dark:text-white"
-        >
-          Close
-        </button>
       </div>
     </div>
   );
